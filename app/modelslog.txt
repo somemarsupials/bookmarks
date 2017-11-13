@@ -1,0 +1,13 @@
+Mon, 13 Nov 2017 18:36:02 GMT  ~  info  ~  Logfile created
+ ~ (0.075924) SET backslash_quote = off
+ ~ (0.005836) SET standard_conforming_strings = on
+ ~ (0.000174) SET client_min_messages = warning
+ ~ (0.010648) SET datestyle = ISO
+ ~ (0.000106) SET client_min_messages = warning
+ ~ (0.000118) SET client_min_messages = warning
+ ~ (0.185629) SELECT current_schema()
+ ~ (0.201671) SELECT COUNT(*) FROM "information_schema"."tables" WHERE "table_type" = 'BASE TABLE' AND "table_schema" = 'public' AND "table_name" = 'links'
+ ~ (0.051937) CREATE TABLE "links" ("id" SERIAL NOT NULL, "title" VARCHAR(50), "url" TEXT, "tag" VARCHAR(50), PRIMARY KEY("id"))
+ ~ (0.001219) RESET client_min_messages
+ ~ (0.000122) RESET client_min_messages
+ ~ (0.020326) INSERT INTO "links" ("title", "url", "tag") VALUES ('theo linkedin', 'linkedin.com/theo', 'to_hire') RETURNING "id"
